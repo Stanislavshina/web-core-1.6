@@ -1,0 +1,16 @@
+.page-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $backgroundMainColor;
+}
+
+@media (max-width: 1300px) {
+  .page-container {
+    max-width: 768px;
+    flex-direction: column;
+  }
+}

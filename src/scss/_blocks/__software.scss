@@ -1,0 +1,44 @@
+.software {
+  margin-bottom: 50px;
+  &__list {
+    height: 160px;
+  }
+  &__item {
+    max-height: 72px;
+  }
+  &__link {
+    padding: 20px 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn {
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .software {
+    margin-bottom: 32px;
+    &__list {
+      height: 180px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .software {
+    &__list {
+      height: auto;
+    }
+    &__link {
+      & img {
+        width: auto;
+      }
+    }
+    &__btn {
+      display: none;
+    }
+  }
+}

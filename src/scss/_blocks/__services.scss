@@ -1,0 +1,124 @@
+.services {
+  padding-top: 20px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    &__repair-info {
+      margin-right: 32px;
+    }
+  }
+  &-about-block {
+    padding-left: 35px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 47px;
+    row-gap: 22px;
+    overflow: visible;
+    color: $activeLinksColor;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  &__item--active {
+    padding: 8px 20px;
+    border: 2px solid #b8ffec;
+    background-color: $btnColor;
+    border-radius: 6px;
+  }
+  &__item {
+    transition: all ease-in-out 0.2s;
+    &:hover {
+      border-bottom: 3px solid #41f6d7;
+    }
+  }
+  &-describe {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 50px;
+    &__text-block {
+      font-size: $textFS;
+      font-weight: 400;
+    }
+    &__text {
+      width: 490px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    &__img {
+      border-radius: 8px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .services {
+    padding-top: 24px;
+    &-header {
+      &__repair-info {
+        display: none;
+      }
+    }
+    &-about-block {
+      padding-left: 20px;
+    }
+    &__list {
+      flex-wrap: nowrap;
+      overflow: scroll;
+      gap: 25px;
+      white-space: nowrap;
+      padding: 5px;
+      margin-bottom: 32px;
+    }
+    &__item--active {
+      padding: 8px 15px;
+    }
+    &-describe {
+      gap: 48px;
+      margin-bottom: 30px;
+      &__text {
+        width: 312px;
+        height: 155px;
+        gap: 30px;
+      }
+      &__img {
+        width: 360px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .services {
+    &-about-block {
+      padding-left: 0;
+    }
+    &__list {
+      padding-left: 16px;
+    }
+    &-describe {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      &__text-block {
+        padding-left: 16px;
+      }
+      &__text {
+        width: 100%;
+        height: 80px;
+        gap: 16px;
+      }
+      &__img {
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

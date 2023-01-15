@@ -1,0 +1,48 @@
+@import './vars';
+@import './_blocks/reset';
+@font-face {
+  font-family: 'TTLakes-Bold';
+  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TTLakes-Regular';
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+}
+
+@import './normalize.css';
+@import './_blocks/_header';
+@import './_blocks/_titles';
+@import './_blocks/_page';
+@import './_blocks/_btn';
+@import './_blocks/_aside';
+@import './_blocks/_services';
+@import './_blocks/_swiper';
+@import './_blocks/_software';
+@import './_blocks/_repair';
+@import './_blocks/_price';
+@import './_blocks/_footer';
+@import './_blocks/_modal';
+
+.show {
+  height: auto;
+}
+.blur {
+  &--active {
+    position: absolute;
+    z-index: 1;
+    background-color: $btnColor;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.lock {
+  overflow: hidden;
+}

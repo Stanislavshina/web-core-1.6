@@ -1,0 +1,44 @@
+.title {
+  padding-left: 35px;
+  position: relative;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 40px;
+    background-color: #41f6d7;
+    border-radius: 2px;
+    top: 0px;
+    left: 2px;
+  }
+  &__modal {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-bottom: 24px;
+  }
+  &__second-title {
+    background-color: $btnColor;
+    border-top: 1px solid $borderColor;
+    padding: 16px 0px 16px 32px;
+    color: $activeLinksColor;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: $regularFS;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .title {
+    padding-left: 20px;
+    &__second-title {
+      padding-left: 24px;
+    }
+  }
+}

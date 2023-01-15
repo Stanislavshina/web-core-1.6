@@ -1,0 +1,145 @@
+.button {
+  position: relative;
+  cursor: pointer;
+  &--pink {
+    background-color: $btnBackground;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  &__read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-weight: 500;
+    & svg {
+      transform: rotate(0deg);
+      transition: all ease-in-out 0.4s;
+    }
+    &--active svg {
+      transform: rotate(180deg);
+      transition: all ease-in-out 0.4s;
+    }
+  }
+  &__price {
+    width: 119px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $btnBackground;
+    color: $btnColor;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+  }
+  &__advanced {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__aside-close {
+    display: none;
+  }
+  &__modal {
+    align-self: flex-end;
+    width: 119px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $btnBackground;
+    color: $btnColor;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    &-close {
+      position: absolute;
+      top: 32px;
+      left: -25%;
+    }
+  }
+  &__menu {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: #eaeaea;
+      height: 100%;
+      top: 0;
+      right: -50%;
+      border-radius: 1px;
+    }
+  }
+  &__flex-block {
+    display: none;
+  }
+}
+
+.contact-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.repair-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1300px) {
+  .button {
+    &__aside-close {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .button {
+    &__price {
+      display: none;
+      padding: 4px 7px;
+      width: 100px;
+    }
+    &__flex-block {
+      display: block;
+      padding: 4px 5px;
+    }
+    &__advanced {
+      display: inline-block;
+      text-align: left;
+    }
+    &__modal {
+      &-close {
+        position: static;
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .button {
+    &__menu::after {
+      display: none;
+    }
+  }
+}
