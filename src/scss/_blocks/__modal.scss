@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   background-color: $btnColor;
-  z-index: 2;
+  z-index: 9999;
   padding-top: 32px;
   max-width: 440px;
   width: 100%;
@@ -50,4 +50,7 @@
   &--active {
     display: block;
   }
+}
+
+@media (max-width: ) {
 }

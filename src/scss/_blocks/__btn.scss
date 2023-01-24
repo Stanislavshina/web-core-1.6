@@ -1,6 +1,10 @@
 .button {
   position: relative;
   cursor: pointer;
+  &__reapir-application {
+    background-image: url('../img/repair.svg');
+    background-repeat: no-repeat;
+  }
   &--pink {
     background-color: $btnBackground;
     width: 40px;

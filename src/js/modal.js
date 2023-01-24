@@ -7,7 +7,9 @@ const btnAsideClose = document.querySelector('.button__aside-close'),
   modal1 = document.querySelector('.modal-1'),
   modal2 = document.querySelector('.modal-2'),
   asideMenu = document.querySelector('.aside-menu'),
-  blur = document.querySelector('.blur')
+  blur = document.querySelector('.blur'),
+  asideFeedbackBtn = document.querySelector('.aside__button-feedback'),
+  asideCallbackBtn = document.querySelector('.aside__button-callback')
 
 const toggleAsideMenu = () => {
   asideMenu.classList.toggle('aside--active')
@@ -16,10 +18,17 @@ const toggleAsideMenu = () => {
 }
 
 const openModal = (e) => {
-  if (e.target.classList.contains('repair-application')) {
+  if (
+    e.target.classList.contains('repair-application') ||
+    e.target.classList.contains('aside__button-feedback')
+  ) {
     modal1.classList.add('modal--active')
+    console.log(e.target)
   }
-  if (e.target.classList.contains('repair-status')) {
+  if (
+    e.target.classList.contains('repair-status') ||
+    e.target.classList.contains('aside__button-callback')
+  ) {
     modal2.classList.add('modal--active')
   }
   document.body.classList.add('lock')
@@ -37,6 +46,9 @@ const closeModal = () => {
   document.body.classList.remove('lock')
   blur.classList.remove('blur--active')
 }
+
+asideCallbackBtn.addEventListener('click', (e) => openModal(e))
+asideFeedbackBtn.addEventListener('click', (e) => openModal(e))
 
 blur.addEventListener('click', () => {
   modal1.classList.remove('modal--active')
