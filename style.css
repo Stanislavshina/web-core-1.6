@@ -497,6 +497,9 @@ button {
 .button {
   position: relative;
   cursor: pointer; }
+  .button__reapir-application {
+    background-image: url(./static/repair.svg);
+    background-repeat: no-repeat; }
   .button--pink {
     background-color: #ff3e79;
     width: 40px;
@@ -999,7 +1002,7 @@ button {
   top: 0;
   right: 0;
   background-color: #ffffff;
-  z-index: 2;
+  z-index: 9999;
   padding-top: 32px;
   max-width: 440px;
   width: 100%;
